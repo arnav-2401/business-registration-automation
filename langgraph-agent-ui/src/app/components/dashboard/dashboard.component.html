@@ -1,0 +1,15 @@
+<div class="dashboard-container">
+    <h2>Automation Progress</h2>
+    
+    <div class="status-card">
+      <h3>Current Status: {{ currentStatus | titlecase }}</h3>
+      <div class="spinner" *ngIf="currentStatus === 'processing'"></div>
+    </div>
+  
+    <div class="log-section">
+      <h4>Process Logs</h4>
+      <div class="log-entry" *ngFor="let entry of statusUpdates">
+        {{ entry }}
+      </div>
+    </div>
+  </div>
